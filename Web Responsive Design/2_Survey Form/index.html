@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Film Survey Form</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header text-center">
+        <h1 id="title">Film Survey Form</h1>
+        <p id="description" class="text-center">
+          Thank you to complete our film survey
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="number" id="number-label"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="12"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>Witch option best describe your current job</p>
+          <select name="time" id="dropdown" class="form-control" required>
+            <option disabled selected value>Select current job</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer Not To Say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>How long you listen songs every day?</p>
+          <label>
+            <input
+              type="radio"
+              name="long"
+              value="1-5 Hours"
+              class="input-radio"
+              checked
+            />1-5 Hours
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="long"
+              value="6-10 Hours"
+              class="input-radio"
+            />6-10 Hours
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="long"
+              value="10 Hours++"
+              class="input-radio"
+            />10 Hours++
+          </label>
+        </div>
+        <div class="from-group">
+          <p>What is your favorite genre of music?</p>
+          <select name="genre" id="genre" class="form-control" required>
+            <option disabled selected value>Select a genre</option>
+            <option value="classic">Classic</option>
+            <option value="jazz">Jazz</option>
+            <option value="blues">Blues</option>
+            <option value="country">Country</option>
+            <option value="techno">Techno</option>
+            <option value="reggae">Reggae</option>
+            <option value="r&b">R&B</option>
+            <option value="Rap">Rap</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>
+            What platforms do you listen to music on?<span class="clue"
+              >(Check all that apply)</span
+            >
+          </p>
+          <label>
+            <input
+              name="platform"
+              value="spotify"
+              type="checkbox"
+              class="input-checkbox"
+            />Spotify</label
+          >
+          <label>
+            <input
+              name="platform"
+              value="apple-music"
+              type="checkbox"
+              class="input-checkbox"
+            />Apple Music</label
+          >
+          <label>
+            <input
+              name="platform"
+              value="youtube"
+              type="checkbox"
+              class="input-checkbox"
+            />YouTube</label
+          >
+          <label>
+            <input
+              name="platform"
+              value="radio"
+              type="checkbox"
+              class="input-checkbox"
+            />Radio</label
+          >
+          <label>
+            <input
+              name="platform"
+              value="other"
+              type="checkbox"
+              class="input-checkbox"
+            />Other</label
+          >
+        </div>
+        <div class="form-group">
+          <p>Additional information</p>
+          <textarea
+            name="comment"
+            id="info"
+            class="input-textarea"
+            placeholder="Enter anything we should know."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
