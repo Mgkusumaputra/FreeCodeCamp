@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+}
+
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-family: "Poppins", sans-serif;
+  padding: 0 5%;
+  height: 100px;
+  background-color: #000000;
+}
+
+nav .head-img {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul a {
+  display: block;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container1 {
+  width: 100%;
+  margin: 70px auto;
+  height: fit-content;
+}
+
+.banner-2_3 {
+  display: flex;
+}
+
+.banner-2_3 img {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: column;
+  margin: 15px;
+  overflow: hidden;
+}
+
+.product-vid {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-vid iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+.specs {
+  color: #fff;
+  margin: 3rem 2rem 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.row-spec {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+tbody {
+  margin-bottom: 0.8rem;
+}
+
+th {
+  width: 12rem;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border-right: 2px #9e9e9e solid;
+}
+
+td {
+  padding: 0.25rem 1.25rem 0.25rem 1.25rem;
+}
+
+.sub-spec {
+  font-size: 1.25rem;
+}
+
+.desc-spec {
+  font-size: 1rem;
+}
+
+br {
+  content: "";
+  width: calc(100% + 20px);
+  display: block;
+  position: relative;
+  margin: 2px 0;
+  line-height: 25px;
+}
+
+.form-card {
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  margin: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.email {
+  width: 15rem;
+  height: 35px;
+  display: block;
+  margin: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.submit {
+  display: block;
+  margin: auto;
+  color: #fff;
+  background-color: #9e9e9e;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  nav ul {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+  nav ul a {
+    font-size: 20px;
+  }
+  nav :checked ~ ul {
+    bottom: 0;
+  }
+  nav .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+}
