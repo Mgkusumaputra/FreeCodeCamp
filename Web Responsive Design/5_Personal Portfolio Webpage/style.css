@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --b-white: rgb(221, 221, 221);
+  --b-black: rgb(57, 57, 57);
+  --b-orange: rgb(241, 166, 3);
+  --a-orange: rgba(214, 147, 0, 0.8);
+  --a-white: rgba(221, 221, 221, 0.8);
+  --a-black: rgba(57, 57, 57, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--b-white);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: var(--a-orange);
+  color: var(--b-white);
+}
+
+nav i {
+  font-size: 3rem;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 2rem;
+  list-style: none;
+}
+
+nav ul li {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+nav ul li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--o-white);
+  transition: 0.5s ease-out;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-section {
+  justify-content: center;
+  width: 100%;
+  background-color: var(--b-black);
+}
+
+.projects {
+  padding-top: 10rem;
+  color: var(--b-black);
+  background-color: var(--b-white);
+}
+
+.project-tile {
+  padding-bottom: 0.8rem;
+  border-bottom: 2px var(--a-black) solid;
+}
+
+.project-card {
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+}
+
+.card {
+  background: var(--a-black);
+  color: var(--b-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 5px;
+  height: 20rem;
+  width: 33rem;
+}
+
+.card-img {
+  height: 15rem;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 1.5rem;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.card-img:hover {
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--b-white);
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.card a:hover {
+  border-radius: 12px;
+  background-color: var(--a-white);
+  color: var(--b-black);
+}
+
+.profile-links {
+  padding-top: 10rem;
+  background-color: var(--b-black);
+  color: var(--b-white);
+}
+
+.profile-link {
+  margin-top: 3rem;
+  border-radius: 22px;
+  height: 2.5rem;
+  width: 10rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--a-white);
+  background-color: var(--a-orange);
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.profile-link:hover {
+  transform: scale(1.2);
+  color: var(--b-white);
+  background-color: var(--b-orange);
+}
+
+.profile-links h5 {
+  margin-top: 22rem;
+}
+
+@media screen and (max-width: 1313px) {
+  .project-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 15px;
+  }
+  .card {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .project-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 15px;
+  }
+  .card {
+    width: 26rem;
+  }
+}
